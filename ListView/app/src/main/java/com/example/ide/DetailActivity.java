@@ -19,6 +19,5 @@ import android.widget.TextView;
         String name = intent.getStringExtra("Name");
         TextView textView = findViewById(R.id.textView);
         textView.setText(name);
-        Log.d("Selected Name", name);
     }
 }
