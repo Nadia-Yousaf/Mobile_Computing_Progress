@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
-public class DetailActivity extends AppCompatActivity {
+ public class DetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,8 +17,8 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         Intent intent = getIntent();
         String name = intent.getStringExtra("Name");
-        View textView = findViewById(R.id.textView);
-        //textView.setText(name);
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(name);
         Log.d("Selected Name", name);
     }
 }

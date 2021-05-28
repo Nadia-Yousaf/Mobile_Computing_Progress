@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -39,9 +40,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void AddItem(View view) {
-        View input = findViewById(R.id.input);
-        //friendList.add(input.getTex().toString());
-        friendList.add(input.toString());
+        EditText input = findViewById(R.id.input);
+        friendList.add(input.getText().toString());
         arrayAdapter.notifyDataSetChanged();
 
     }
